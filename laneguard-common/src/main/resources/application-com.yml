@@ -1,0 +1,8 @@
+server:
+  port: 52637
+
+spring:
+  datasource:
+    url: jdbc:mysql://127.0.0.1:55001/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai&&useSSL=false
+    username: root
+    password: root

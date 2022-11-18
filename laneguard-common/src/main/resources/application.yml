@@ -1,0 +1,26 @@
+server:
+  port: 52637
+# java -jar projectName.jar --spring.profiles.active=dev
+spring:
+  profiles:
+    active: home
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
+  mail:
+    host: host = smtp.sina.com
+    username: laneguard
+    password: 7b97478d0c1814ab
+    default-encoding: UTF-8
+    fromMail:
+      addr: laneguard@sina.com
+mybatis-plus:
+  # 路径不能乱填，范围大了会扫到不该扫的东西，导致启动不起来
+  mapper-locations: classpath*:com/macro/mall/tiny/modules/pms/mapper/**/*.xml #指定mapper.xml路径
+  global-config:
+    db-config:
+      id-type: auto #全局默认主键类型设置为自增
+  configuration:
+    auto-mapping-behavior: partial #只对非嵌套的 resultMap 进行自动映射
+    map-underscore-to-camel-case: true #开启自动驼峰命名规则映射

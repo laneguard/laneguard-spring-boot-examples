@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+    <script src="http://static.runoob.com/assets/vue/1.0.11/vue.min.js"></script>
+    <style>
+        .style1{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div id="app" class="style1">
+    <ul>
+        <li  v-for="todo in todos">
+            {{ todo.text }}
+        </li>
+    </ul>
+</div>
+<script>
+    new Vue({
+  el: '#app',
+  data: {
+    todos: [
+      { text: 'Learn JavaScript' },
+      { text: 'Learn Vue.js' },
+      { text: 'Build Something Awesome' }
+    ]
+  },
+  methods:{
+    method1(){
+        console.log("hello")
+    }
+  }
+})
+</script>
+</body>
+</html>
